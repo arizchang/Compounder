@@ -20,7 +20,7 @@
         android:id="@+id/tvAnnualAdditionLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
         android:text="Annual Addition"
         app:layout_constraintEnd_toEndOf="@+id/tvCurrentPrincipalLabel"
         app:layout_constraintTop_toBottomOf="@+id/tvCurrentPrincipalLabel" />
@@ -29,7 +29,7 @@
         android:id="@+id/tvYearsToGrowLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
         android:text="Years to Grow"
         app:layout_constraintEnd_toEndOf="@+id/tvAnnualAdditionLabel"
         app:layout_constraintTop_toBottomOf="@+id/tvAnnualAdditionLabel" />
@@ -38,7 +38,7 @@
         android:id="@+id/tvInterestRateLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
         android:text="Interest Rate"
         app:layout_constraintEnd_toEndOf="@+id/tvYearsToGrowLabel"
         app:layout_constraintTop_toBottomOf="@+id/tvYearsToGrowLabel" />
@@ -108,7 +108,7 @@
         android:id="@+id/btCalculate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
         android:text="Calculate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -128,7 +128,7 @@
         android:id="@+id/tvTimesCompoundedLabel"
         android:layout_width="94dp"
         android:layout_height="73dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
         android:text="Times Compounded Annually"
         app:layout_constraintEnd_toEndOf="@+id/tvInterestRateLabel"
         app:layout_constraintTop_toBottomOf="@+id/tvInterestRateLabel" />
