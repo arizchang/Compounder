@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import java.text.NumberFormat
 import kotlin.math.pow
 
 private const val TAG = "MainActivity"
@@ -49,6 +50,10 @@ class MainActivity : AppCompatActivity() {
         val compoundInterestForPrincipal = currentPrincipal * (1 + interestRate / timesCompounded).pow(timesCompounded * yearsToGrow)
         val futureValOfSeries = annualAddition * (((1 + interestRate / timesCompounded).pow(timesCompounded * yearsToGrow) - 1) / (interestRate / timesCompounded))
         val amount = compoundInterestForPrincipal + futureValOfSeries
-        tvFutureValue.text = amount.toString()
+
+        val numFormat = NumberFormat.getCurrencyInstance()
+        numFormat.maximumFractionDigits = 2
+        val convert = numFormat.format(amount)
+        tvFutureValue.text = convert
     }
 }
