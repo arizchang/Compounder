@@ -63,7 +63,7 @@ class MainActivity : AppCompatActivity() {
         val timesCompounded = etTimesCompounded.text.toString().toFloat()
 
         val compoundInterestForPrincipal = currentPrincipal * (1 + interestRate / timesCompounded).pow(timesCompounded * yearsToGrow)
-        val futureValOfSeries = annualAddition * (((1 + interestRate / timesCompounded).pow(timesCompounded * yearsToGrow) - 1) / (interestRate / timesCompounded))
+        val futureValOfSeries = (annualAddition / timesCompounded) * (((1 + interestRate / timesCompounded).pow(timesCompounded * yearsToGrow) - 1) / (interestRate / timesCompounded))
         val amount = compoundInterestForPrincipal + futureValOfSeries
 
         val numFormat = NumberFormat.getCurrencyInstance()
@@ -71,6 +71,8 @@ class MainActivity : AppCompatActivity() {
         val convert = numFormat.format(amount)
         tvFutureValue.text = convert
         tvFutureValue.setTextColor(oldColors)
+        Log.i(TAG, "Principal growth: $compoundInterestForPrincipal")
+        Log.i(TAG, "Future of series: $futureValOfSeries")
 
         hideKeyboard()
     }
